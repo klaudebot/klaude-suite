@@ -1,0 +1,75 @@
+{
+  "name": "@klaudebot/suite",
+  "version": "0.1.0",
+  "description": "Klaude — AI-powered Solana trading suite with paper trading, risk management, and real-time market scanning",
+  "type": "module",
+  "bin": {
+    "klaude": "bin/klaude.mjs"
+  },
+  "files": [
+    "bin/",
+    "backend/dist/",
+    "out/",
+    "skills/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && cd backend && npm install && npx tsc",
+    "start": "node bin/klaude.mjs start",
+    "lint": "eslint",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "axios": "^1.13.4",
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.17.0",
+    "ws": "^8.19.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@solana/wallet-adapter-base": "^0.9.27",
+    "@solana/wallet-adapter-react": "^0.15.39",
+    "@solana/wallet-adapter-react-ui": "^0.9.39",
+    "@solana/wallet-adapter-wallets": "^0.19.37",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "framer-motion": "^12.29.2",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tailwindcss": "^4",
+    "typescript": "5.9.3"
+  },
+  "author": "Klaude",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaudebot/klaude-suite.git"
+  },
+  "homepage": "https://github.com/klaudebot/klaude-suite#readme",
+  "keywords": [
+    "solana",
+    "trading",
+    "ai",
+    "paper-trading",
+    "defi",
+    "crypto",
+    "cli",
+    "openclaw",
+    "clawhub",
+    "skill"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
