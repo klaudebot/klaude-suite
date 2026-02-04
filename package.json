@@ -15,10 +15,11 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cd backend && npm install && npx tsc",
+    "build": "next build",
+    "build:all": "next build && cd backend && npm install && npx tsc",
     "start": "node bin/klaude.mjs start",
     "lint": "eslint",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build:all"
   },
   "dependencies": {
     "@solana/web3.js": "^1.98.4",
